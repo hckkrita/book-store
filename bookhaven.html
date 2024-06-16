@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Haven</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .nav-bar{
+            width: 100%;
+            height: 50px;
+            justify-content: space-between;
+            display: flex;
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px rgb(205, 205, 205);
+           
+        }
+        .title{
+            padding-left: 60px;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+        .icons{
+            gap: 10px;
+            padding-top: 10px;
+            padding-right: 60px;
+        }
+        #book-search,
+        #add-book{
+            
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .main-div{
+            padding: 50px;
+           
+        }
+        .main-div h1{
+            padding-bottom: 10px;
+        }
+        .book-list li{
+            padding: 10px;
+        }
+        .book-list i{
+            padding: 10px;
+        }
+        .favorite {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="title">
+                <h1>The Book Haven</h1>
+            </div>
+            <div class="icons">
+                <input type="text" id="book-search" name="book-search" placeholder="Search">
+                <button onclick="searchBook()">Search</button>
+
+                <input type="text" id="add-book" name="add-book" placeholder="Add Book">
+                <button onclick="addBook()">Add</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-div">
+        <h1>Book List</h1>
+        <div class="book-list">
+            <ul id="book-list-ul">
+                <li>
+                    No Longer Human
+                    <i class="ri-star-line" onclick="toggleFavorite(event)"></i>
+                    <i class="ri-delete-bin-line" onclick="removeBook(event)"></i>
+                </li>
+
+                <li>
+                    
+                    Rashōmon
+                    <i class="ri-star-line" onclick="toggleFavorite(event)"></i>
+                    <i class="ri-delete-bin-line" onclick="removeBook(event)"></i>
+                </li>
+
+                <li>
+                    In a Grove
+                    <i class="ri-star-line" onclick="toggleFavorite(event)"></i>
+                    <i class="ri-delete-bin-line" onclick="removeBook(event)"></i>
+                </li>
+
+                <li>
+                    The Nose
+                    <i class="ri-star-line" onclick="toggleFavorite(event)"></i>
+                    <i class="ri-delete-bin-line" onclick="removeBook(event)"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="bookhaven.js"></script>
+</body>
+</html>
